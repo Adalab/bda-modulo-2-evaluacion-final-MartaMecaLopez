@@ -5,10 +5,15 @@ Este proyecto incluye una recopilación de consultas __SQL__ realizadas sobre la
 ### Con este código podremos:
 
 🎬 Consultar información de películas, categorías y actores
+
 👥 Analizar el comportamiento de los clientes (qué alquilan, cuánto y cuándo)
+
 📊 Obtener métricas como promedios, recuentos o duraciones
+
 🔎 Trabajar con subconsultas, JOINs, filtros, agrupaciones y más
+
 🤝 Relacionar varias tablas entre sí para responder preguntas complejas
+
 🚀 Aplicar SQL para análisis de datos reales
 
 ## 🧪 Contenido

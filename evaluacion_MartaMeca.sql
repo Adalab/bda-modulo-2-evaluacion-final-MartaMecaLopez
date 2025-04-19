@@ -120,9 +120,9 @@ GROUP BY ID_Categoría, Nombre_Categoría;
 -- 13. Encuentra el nombre y apellido de los actores que aparecen en la película con title "Indian Love".
 
 SELECT DISTINCT 
-  actor.first_name,
-  actor.last_name,
-  film.title
+  actor.first_name AS Nombre,
+  actor.last_name AS Apellido,
+  film.title AS Título
 FROM actor
 INNER JOIN film_actor ON actor.actor_id = film_actor.actor_id
 INNER JOIN film ON film_actor.film_id = film.film_id
@@ -130,8 +130,8 @@ WHERE film.title = "Indian Love";
     
     
 SELECT DISTINCT 
-actor.first_name,
-actor.last_name
+actor.first_name AS Nombre,
+actor.last_name AS Apellido
 FROM actor
 WHERE actor_id IN (
 SELECT actor_id
@@ -147,7 +147,7 @@ SELECT DISTINCT
 title,
 description
 FROM film_text
-WHERE description LIKE "%dog%" or description LIKE "%cat%";
+WHERE description LIKE "%dog%" OR description LIKE "%cat%";
 
 -- 15. Encuentra el título de todas las películas que fueron lanzadas entre el año 2005 y 2010.
 
@@ -172,9 +172,9 @@ WHERE film_category.category_id = (
 -- COMPROBACIÓN:
     
 SELECT DISTINCT 
-film.title,
-film_category.category_id,
-category.name
+film.title AS Título,
+film_category.category_id AS ID_Categoría,
+category.name AS Categoría
 FROM film
 INNER JOIN film_category
 ON film.film_id = film_category.film_id

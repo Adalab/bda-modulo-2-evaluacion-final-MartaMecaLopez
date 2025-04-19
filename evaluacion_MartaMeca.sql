@@ -63,8 +63,8 @@ WHERE rating NOT LIKE "PG-13" AND rating NOT LIKE "R";
 -- 9. Encuentra la cantidad total de películas en cada clasificación de la tabla film y muestra la clasificación junto con el recuento
 
 SELECT
-rating,
-COUNT(film_id)
+rating AS Clasificación,
+COUNT(film_id) AS Total
 FROM film
 GROUP BY rating;
 

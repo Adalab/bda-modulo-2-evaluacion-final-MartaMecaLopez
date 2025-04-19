@@ -332,7 +332,7 @@ a2.first_name AS "Nombre actor 2",
 a2.last_name AS "Apellido actor 2",
 COUNT(*) AS "Películas Juntos"
 FROM film_actor AS fa1 -- dividimos la tabla de las películas en 2 para hayar las pelis que ha hecho cada actor
-INNER JOIN film_actor AS fa2 -- unimos la tabla consigomisma para poder comparar los id de las películas
+INNER JOIN film_actor AS fa2 -- unimos la tabla consigo misma para poder comparar los id de las películas
 ON fa1.film_id = fa2.film_id AND fa1.actor_id < fa2.actor_id
 -- Cogemos solo los actores con las películas con el mismo id / usamos < para que no se dupliquen los resultados pero con los nombres en la columna contraria
 INNER JOIN actor AS a1 -- dividimos tambien la tabla actor en 2
